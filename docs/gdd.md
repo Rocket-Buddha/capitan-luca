@@ -36,7 +36,13 @@ El objetivo es recorrer la mayor cantidad de **años luz** posible mediante salt
 
 - **Tap sostenido** → carga de impulso
 - **Release** → ejecución del salto
-- Barra visual indica potencia del impulso
+- Durante la selección de dirección se muestra un único indicador de carga
+- El indicador muestra dirección y potencia del impulso en la dirección hacia el dedo del jugador
+- El indicador no aparece al lado del dedo, sino orientado según la dirección apuntada
+- El indicador de impulso es relativamente corto y no invade gran parte de la pantalla
+- Su forma base es un triángulo sutil orientado desde la nave
+- El triángulo se va llenando progresivamente según la potencia acumulada
+- A máxima carga el relleno llega a rojo
 
 ---
 
@@ -60,6 +66,13 @@ La trayectoria final es la suma de estos vectores.
 - Procedural infinita
 - Siempre hay entre **1 y 3 planetas alcanzables**
 
+### Tamaños
+
+- Existen **5 tamaños** de planetas: diminuto, pequeño, mediano, grande y muy grande
+- El planeta actual no recibe zoom especial por cámara
+- El planeta actual mantiene una escala visual consistente con los demás planetas visibles
+- El planeta más grande no puede ocupar más de **1/4 del ancho horizontal** de la pantalla
+
 ### Tipos (inferencia visual)
 
 | Tipo     | Color | Nivel gravedad | Slot |
@@ -82,6 +95,16 @@ La trayectoria final es la suma de estos vectores.
 - ⛽ Recarga de combustible
 - ⚡ Cálculo orbital
 
+### Referencias visuales
+
+Recarga de combustible:
+
+<img src="mockups/fuel-recharge-icon-v02.png" alt="Icono Recarga de combustible" width="160" height="160">
+
+Cálculo orbital:
+
+<img src="mockups/orbital-calculation-icon-v02.png" alt="Icono Cálculo orbital" width="160" height="160">
+
 ### Comportamiento
 
 - Orbitan el planeta
@@ -91,6 +114,8 @@ La trayectoria final es la suma de estos vectores.
 ### Cálculo orbital
 
 - Máximo acumulable: **3**
+- Si no está habilitado, no se muestran ayudas visuales de trayectoria o vectores
+- Sin cálculo orbital activo, el único feedback de apuntado es el indicador de carga del impulso
 
 #### Opción A (detallado)
 Muestra:
@@ -131,20 +156,39 @@ Muestra:
 
 #### Splash
 - Nave + espacio
+- Referencia visual de personaje / tono:
+
+<img src="concept/capitan-luca-concept-v02.png" alt="Concept Capitan Luca" width="470" height="836">
 
 #### Home
+- Reutiliza el mismo parallax espacial del gameplay
+- Logo principal
 - Botón **Jugar**
 - Botón **Settings**
 - Botón **?** (historia + créditos)
+- Referencia visual de logo:
+
+<img src="concept/capitan-luca-logo-v02.png" alt="Logo Capitan Luca" width="768" height="512">
+
+- Referencia visual del modal de historia y créditos:
+
+<img src="mockups/home-history-credits-modal-mockup-v01.png" alt="Mockup modal Historia y Creditos" width="497" height="790">
 
 #### Settings (modal)
 - Música ON/OFF
 - SFX ON/OFF
-- Ver ranking
+- Top 5 integrado en el mismo modal
+- Cada entrada muestra: nombre, puntaje y fecha
+
+- Referencia visual actual:
+
+<img src="mockups/home-settings-modal-mockup-v02.png" alt="Mockup modal Settings" width="470" height="836">
 
 #### Ranking
 - Top 5 jugadores
 - Persistente local
+- Se muestra dentro del modal de Settings
+- Cada entrada muestra: nombre, puntaje y fecha
 
 #### Game Over
 - Mensaje "Game Over"
@@ -160,10 +204,27 @@ Muestra:
 
 ## 10. HUD In-game
 
-- Barra de combustible
-- Distancia en años luz
-- Botón ⚡ (cálculo orbital)
-- Indicador de carga de impulso
+### Composición in-game
+
+- El planeta actual siempre queda centrado en el eje horizontal de la pantalla
+- Su posición vertical queda lo más abajo posible
+- El planeta y su órbita deben permanecer completamente visibles dentro de pantalla
+- Las órbitas visibles se representan como círculos, no como elipses
+- El planeta actual no se agranda por estar en foco
+
+### HUD
+
+- Botón de pausa en la esquina superior derecha
+- Barra de combustible en la parte superior izquierda
+- Distancia en años luz centrada en la parte superior
+- Botón ⚡ (cálculo orbital) en la esquina inferior derecha
+- Indicador de carga de impulso orientado hacia la dirección seleccionada por el jugador
+- El indicador de carga no se dibuja junto al dedo o punto de contacto
+- El indicador de carga usa una lectura visual triangular, sutil y de longitud contenida
+
+### Referencia visual actual
+
+<img src="mockups/ingame-mockup-v03.png" alt="Mockup In-game" width="512" height="768">
 
 ---
 

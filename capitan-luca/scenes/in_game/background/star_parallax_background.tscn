@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/in_game/background/star_parallax_background.gd" id="1_tvt2p"]
+
+[node name="StarParallaxBackground" type="CanvasLayer"]
+layer = -10
+script = ExtResource("1_tvt2p")
+
+[node name="FarLayer" type="Parallax2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="FarLayer"]
+
+[node name="MidLayer" type="Parallax2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="MidLayer"]
+
+[node name="NearLayer" type="Parallax2D" parent="."]
+
+[node name="Sprite" type="Sprite2D" parent="NearLayer"]

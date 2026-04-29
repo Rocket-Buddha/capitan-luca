@@ -6,7 +6,7 @@
 - `scenes/ui/splash/SplashScreen.tscn`
 - `scripts/ui/splash/SplashScreen.gd`
 - Trabajo:
-- montar fondo espacial simple y nave o placeholder visual
+- montar splash 2D con fondo espacial simple y nave o placeholder visual
 - agregar temporizador o input para avanzar al home
 - dejar hooks para reproducir musica inicial si existe
 - Dependencias: 02

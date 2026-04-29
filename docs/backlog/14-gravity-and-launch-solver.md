@@ -9,6 +9,7 @@
 - combinar tangente orbital, impulso y gravedad relevante
 - exponer simulacion discreta suficiente para validar saltos
 - devolver motivos tecnicos de fallo cuando no hay captura de orbita
+- mantener toda la resolucion de trayectorias en el plano de juego, sin usar profundidad
 - Dependencias: 10, 12, 13
 - Ver con humanos:
 - elegir tuning inicial de gravedad y consumo antes de balance fino

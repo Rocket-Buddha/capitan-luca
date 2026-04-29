@@ -9,6 +9,7 @@
 - orbita a mitad de velocidad orbital minima
 - colision coleccionable con la nave
 - sistema simple de tipo de powerup por recurso o enum
+- conservar el movimiento en el mismo plano aunque la pieza tenga presencia visual 3D
 - Dependencias: 10, 12
 - Ver con humanos:
 - confirmar distancia orbital visual de pickups respecto del planeta

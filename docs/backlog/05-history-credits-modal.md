@@ -1,6 +1,6 @@
 # 05. History credits modal
 
-- Objetivo: crear el modal de historia y creditos sobre el home.
+- Objetivo: crear el modal 2D de historia y creditos sobre el home.
 - Ownership: `scenes/ui/home/HistoryCreditsModal.tscn`, `scripts/ui/home/HistoryCreditsModal.gd`
 - Archivos:
 - `scenes/ui/home/HistoryCreditsModal.tscn`

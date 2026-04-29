@@ -1,6 +1,6 @@
 # 06. Settings modal and ranking
 
-- Objetivo: implementar el modal de ajustes con ranking Top 5 integrado.
+- Objetivo: implementar el modal 2D de ajustes con ranking Top 5 integrado.
 - Ownership: `scenes/ui/home/SettingsModal.tscn`, `scripts/ui/home/SettingsModal.gd`
 - Archivos:
 - `scenes/ui/home/SettingsModal.tscn`

@@ -8,7 +8,8 @@
 - `scenes/gameplay/planet/Planet.tscn`
 - Trabajo:
 - definir 5 tamanos y 5 tipos visuales con gravedad asociada
-- construir factory para instanciar un planeta con color, radio y masa
+- construir factory para instanciar un planeta con data de juego y presentacion 3D simple
+- permitir rotacion suave del planeta sin perder silueta circular clara
 - forzar limite visual del planeta mas grande a 1/4 del ancho de pantalla
 - Dependencias: 09
 - Ver con humanos:

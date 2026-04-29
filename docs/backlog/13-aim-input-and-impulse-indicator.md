@@ -9,6 +9,7 @@
 - detectar direccion hacia el dedo
 - acumular potencia mientras el input esta sostenido
 - dibujar triangulo corto, sutil, orientado desde la nave y llenado hasta rojo
+- mantener el indicador alineado con la lectura frontal del gameplay aunque el mundo sea visualmente 3D
 - Dependencias: 12
 - Ver con humanos:
 - confirmar duracion maxima de carga y curva de llenado visual

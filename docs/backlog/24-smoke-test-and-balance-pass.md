@@ -6,6 +6,7 @@
 - `docs/backlog/24-smoke-test-and-balance-pass.md`
 - Trabajo:
 - correr smoke manual de home, modales, gameplay, derrota y top 5
+- verificar que el gameplay 3D conserve la lectura general del mockup
 - registrar bugs reproducibles con archivo afectado
 - registrar tuning pendiente para gravedad, consumo, spawn y ayudas orbitales
 - Dependencias: 01 -> 23

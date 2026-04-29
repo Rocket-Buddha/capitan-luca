@@ -6,12 +6,14 @@
 - `assets/ui/orbital-calculation-icon.png`
 - `assets/ui/fuel-recharge-icon.png`
 - `assets/ui/logo.png`
+- `assets/gameplay/`
 - `scripts/ui/IconLibrary.gd`
 - Trabajo:
 - importar placeholders desde `docs/mockups` y `docs/concept`
 - mapear rutas de iconos y logo en un solo helper
+- crear placeholders visuales para planetas, nave y powerups coherentes con la lectura frontal del gameplay
 - evitar referencias directas a `docs/` desde escenas de runtime
-- Dependencias: 04, 15, 18
+- Dependencias: 04, 10, 15, 18
 - Ver con humanos:
 - confirmar que las versiones `v02` actuales son las que pasan a runtime
 - Criterio de cierre:

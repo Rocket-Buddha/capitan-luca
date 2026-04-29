@@ -1,17 +1,18 @@
 # 01. Bootstrap Godot project
 
-- Objetivo: crear el esqueleto minimo del proyecto Godot 4 y dejar una escena principal arrancable.
-- Ownership: `project.godot`, `scenes/app/App.tscn`, `scripts/app/App.gd`
+- Estado: cerrada
+- Objetivo: dejar creada la base minima del proyecto Godot 4 y un bootstrap inicial arrancable.
+- Ownership: `project.godot`, `scenes/home/home.tscn`
 - Archivos:
 - `project.godot`
-- `scenes/app/App.tscn`
-- `scripts/app/App.gd`
-- Trabajo:
+- `scenes/home/home.tscn`
+- Trabajo realizado:
 - crear el proyecto Godot 4 en modo portrait
-- definir `App.tscn` como escena principal
-- instanciar un nodo raiz simple con script `App.gd`
+- definir `home.tscn` como escena principal inicial
+- dejar un nodo raiz simple para bootstrap del proyecto
+- validar que el proyecto abra y ejecute sin configuracion extra
 - Dependencias: ninguna
 - Ver con humanos:
-- confirmar nombre final de paquete y orientacion bloqueada en portrait
+- decision tomada: usar `home.tscn` como bootstrap inicial
 - Criterio de cierre:
-- el proyecto abre en Godot y corre mostrando una escena vacia controlada por `App.gd`
+- cumplido: el proyecto abre en Godot y corre con `home.tscn` como escena principal

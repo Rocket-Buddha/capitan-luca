@@ -8,6 +8,7 @@
 - generar secuencias de planetas hacia arriba de pantalla
 - garantizar entre 1 y 3 planetas alcanzables por tramo
 - devolver data desacoplada de la escena para luego instanciar
+- mantener toda la generacion en coordenadas de juego del mismo plano
 - Dependencias: 10, 14
 - Ver con humanos:
 - validar semilla fija para debug y semilla random para release

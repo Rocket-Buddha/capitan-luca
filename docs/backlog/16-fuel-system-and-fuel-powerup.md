@@ -9,6 +9,7 @@
 - definir tanque maximo y costo por impulso
 - bloquear lanzamiento cuando no hay combustible
 - aplicar recarga al recolectar el powerup verde
+- mantener el estado de combustible separado de la capa visual que lo representa
 - Dependencias: 13, 15
 - Ver con humanos:
 - confirmar si la recarga suma valor fijo o porcentaje del tanque

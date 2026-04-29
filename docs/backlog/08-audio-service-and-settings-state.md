@@ -9,6 +9,7 @@
 - registrar `AudioService` como autoload
 - mapear ON/OFF de musica y SFX a buses o volumen
 - cargar estado inicial desde `SaveData`
+- dejar el servicio reutilizable tanto por pantallas 2D como por la escena de juego
 - Dependencias: 02, 07
 - Ver con humanos:
 - confirmar si el proyecto usara buses separados `Music` y `SFX`

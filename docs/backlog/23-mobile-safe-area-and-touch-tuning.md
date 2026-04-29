@@ -10,6 +10,7 @@
 - respetar safe area en top/bottom UI
 - revisar tamanos tactiles de `Jugar`, `Settings`, `?`, pausa y boton orbital
 - ajustar sensibilidad de hold/release para pantallas chicas
+- verificar que el gameplay visual 3D mantenga lectura clara en mobile portrait
 - Dependencias: 04, 13, 18
 - Ver con humanos:
 - confirmar dispositivos objetivo minimos para validar safe area y DPI

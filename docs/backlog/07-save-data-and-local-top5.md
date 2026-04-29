@@ -9,6 +9,7 @@
 - definir schema local para audio settings y top 5
 - guardar y leer datos desde `user://`
 - exponer funciones para insertar score y truncar a 5 entradas
+- mantener persistencia desacoplada de si la informacion viene de UI 2D o de una corrida visual 3D
 - Dependencias: 02
 - Ver con humanos:
 - confirmar si la fecha se guarda local del dispositivo o UTC normalizada

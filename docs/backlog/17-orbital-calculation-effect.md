@@ -9,6 +9,7 @@
 - acumular hasta 3 cargas
 - habilitar y consumir cargas desde HUD
 - exponer datos de ayuda visual al sistema de juego
+- mantener las ayudas alineadas a la vista del gameplay sin cambiar la logica del plano
 - Dependencias: 15, 18
 - Ver con humanos:
 - decision pendiente del GDD: opcion A detallada vs opcion B simplificada

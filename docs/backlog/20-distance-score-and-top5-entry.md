@@ -10,6 +10,7 @@
 - acumular distancia recorrida
 - convertirla al formato visible del HUD y game over
 - si entra al top 5, pedir nombre y guardar con fecha
+- mantener el flujo de ingreso como overlay 2D coherente con el resto de la UI
 - Dependencias: 07, 19
 - Ver con humanos:
 - confirmar longitud maxima del nombre y validaciones de caracteres

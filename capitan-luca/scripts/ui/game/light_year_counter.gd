@@ -1,7 +1,7 @@
 extends Control
 
-@export var light_years := 12.4
-@export var unit_text := "AL"
+@export var light_years: float = 12.4
+@export var unit_text: String = "AL"
 
 @onready var value_label: Label = $Readout/ValueLabel
 @onready var unit_label: Label = $Readout/UnitMargin/UnitLabel

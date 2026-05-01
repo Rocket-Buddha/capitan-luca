@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=6 format=3]
 
-[ext_resource type="Script" path="res://scripts/ui/game/hud.gd" id="1_v5h2f"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/fuel_bar.tscn" id="2_6jxg8"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/light_year_counter.tscn" id="3_u0hde"]
-[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="4_q1dh4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/pause_button.tscn" id="5_gv5i1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/fuel_bar.tscn" id="1_6jxg8"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/light_year_counter.tscn" id="2_u0hde"]
+[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_q1dh4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/pause_button.tscn" id="4_gv5i1"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
 bg_color = Color(0.0509804, 0.101961, 0.188235, 0.92)
@@ -40,7 +39,6 @@ content_margin_bottom = 14.0
 
 [node name="HUD" type="CanvasLayer"]
 layer = 10
-script = ExtResource("1_v5h2f")
 
 [node name="Root" type="Control" parent="."]
 layout_mode = 3
@@ -61,25 +59,27 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 3
 theme_override_font_sizes/font_size = 18
-theme_override_fonts/font = ExtResource("4_q1dh4")
+theme_override_fonts/font = ExtResource("3_q1dh4")
 text = "FUEL"
 
-[node name="FuelBar" parent="Root" instance=ExtResource("2_6jxg8")]
+[node name="FuelBar" parent="Root" instance=ExtResource("1_6jxg8")]
 offset_left = 108.0
 offset_top = 60.0
 offset_right = 328.0
 offset_bottom = 84.0
-bar_size = Vector2(220, 24)
+custom_minimum_size = Vector2(220, 24)
+fuel_percent = 75.0
 
-[node name="LightYearCounter" parent="Root" instance=ExtResource("3_u0hde")]
+[node name="LightYearCounter" parent="Root" instance=ExtResource("2_u0hde")]
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -170.0
 offset_top = 30.0
 offset_right = 170.0
 offset_bottom = 106.0
+light_years = 12.4
 
-[node name="PauseButton" parent="Root" instance=ExtResource("5_gv5i1")]
+[node name="PauseButton" parent="Root" instance=ExtResource("4_gv5i1")]
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -108.0

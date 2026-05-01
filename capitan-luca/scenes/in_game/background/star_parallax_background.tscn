@@ -1,19 +1,56 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=4 format=3]
 
-[ext_resource type="Script" path="res://scripts/in_game/background/star_parallax_background.gd" id="1_tvt2p"]
+[ext_resource type="Texture2D" path="res://assets/in-game/background/stars-far-v01.png" id="1_k4hkf"]
+[ext_resource type="Texture2D" path="res://assets/in-game/background/stars-mid-v01.png" id="2_khr8q"]
+[ext_resource type="Texture2D" path="res://assets/in-game/background/stars-near-v01.png" id="3_obcnf"]
 
 [node name="StarParallaxBackground" type="CanvasLayer"]
 layer = -10
-script = ExtResource("1_tvt2p")
 
 [node name="FarLayer" type="Parallax2D" parent="."]
+repeat_size = Vector2(1080, 1920)
+autoscroll = Vector2(-1.5, 0.5)
+repeat_times = 2
+follow_viewport = false
+ignore_camera_scroll = true
 
 [node name="Sprite" type="Sprite2D" parent="FarLayer"]
+modulate = Color(1, 1, 1, 0.9)
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("1_k4hkf")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 1920)
 
 [node name="MidLayer" type="Parallax2D" parent="."]
+repeat_size = Vector2(1080, 1920)
+autoscroll = Vector2(-3, 1.1)
+repeat_times = 2
+follow_viewport = false
+ignore_camera_scroll = true
 
 [node name="Sprite" type="Sprite2D" parent="MidLayer"]
+modulate = Color(1, 1, 1, 0.4)
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("2_khr8q")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 1920)
 
 [node name="NearLayer" type="Parallax2D" parent="."]
+repeat_size = Vector2(1080, 1920)
+autoscroll = Vector2(-4.5, 1.8)
+repeat_times = 2
+follow_viewport = false
+ignore_camera_scroll = true
 
 [node name="Sprite" type="Sprite2D" parent="NearLayer"]
+modulate = Color(1, 1, 1, 0.55)
+texture_filter = 1
+texture_repeat = 2
+texture = ExtResource("3_obcnf")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1080, 1920)

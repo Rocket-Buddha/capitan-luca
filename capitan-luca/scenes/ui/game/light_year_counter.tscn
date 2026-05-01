@@ -7,6 +7,8 @@
 custom_minimum_size = Vector2(340, 76)
 mouse_filter = 2
 script = ExtResource("1_3lo1o")
+light_years = 12.4
+unit_text = "AL"
 
 [node name="Readout" type="HBoxContainer" parent="."]
 layout_mode = 1

@@ -1,10 +1,27 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="Script" path="res://scripts/in_game/planet.gd" id="1_mf04e"]
+[ext_resource type="Texture2D" path="res://assets/in-game/planet-earth-pixel-v01.png" id="2_j8dn0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71m8j"]
+texture_filter = 0
+roughness = 0.95
+albedo_texture = ExtResource("2_j8dn0")
+
+[sub_resource type="SphereMesh" id="SphereMesh_r3xtk"]
+radius = 0.625
+height = 1.25
+radial_segments = 32
+rings = 16
 
 [node name="Planet" type="Node3D"]
+position = Vector3(0, -3.0492, 0)
 script = ExtResource("1_mf04e")
 
 [node name="TiltPivot" type="Node3D" parent="."]
+rotation = Vector3(0, 0, -0.410152)
 
 [node name="Visual" type="MeshInstance3D" parent="TiltPivot"]
+rotation = Vector3(0, 0.35, 0)
+material_override = SubResource("StandardMaterial3D_71m8j")
+mesh = SubResource("SphereMesh_r3xtk")

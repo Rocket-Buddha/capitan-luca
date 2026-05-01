@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://ccd3ad6otedv7"]
 
-[ext_resource type="Script" uid="uid://diu3wsm7sf2qm" path="res://scripts/in_game/in_game_main.gd" id="1_l13j6"]
-[ext_resource type="PackedScene" path="res://scenes/in_game/planet.tscn" id="2_4ywy3"]
-[ext_resource type="PackedScene" path="res://scenes/in_game/ship.tscn" id="3_62liu"]
-[ext_resource type="PackedScene" path="res://scenes/in_game/background/star_parallax_background.tscn" id="4_3wgtd"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/hud.tscn" id="5_7dp5g"]
+[ext_resource type="PackedScene" path="res://scenes/in_game/planet.tscn" id="1_4ywy3"]
+[ext_resource type="PackedScene" path="res://scenes/in_game/ship.tscn" id="2_62liu"]
+[ext_resource type="PackedScene" path="res://scenes/in_game/background/star_parallax_background.tscn" id="3_3wgtd"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/hud.tscn" id="4_7dp5g"]
 
 [sub_resource type="Environment" id="Environment_7he1c"]
 background_mode = 3
@@ -14,9 +13,8 @@ ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 0.7
 
 [node name="InGameMainNode3D" type="Node3D" unique_id=1184916794]
-script = ExtResource("1_l13j6")
 
-[node name="Background" parent="." unique_id=868373653 instance=ExtResource("4_3wgtd")]
+[node name="Background" parent="." unique_id=868373653 instance=ExtResource("3_3wgtd")]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=345100702]
 environment = SubResource("Environment_7he1c")
@@ -33,8 +31,9 @@ far = 100.0
 transform = Transform3D(0.86602527, -0.28678825, 0.4095763, 0, 0.8191522, 0.5735762, -0.50000024, -0.4967315, 0.7094065, 0, 3, 6)
 light_energy = 2.2
 
-[node name="Planet" parent="." unique_id=537932661 instance=ExtResource("2_4ywy3")]
+[node name="Planet" parent="." unique_id=537932661 instance=ExtResource("1_4ywy3")]
 
-[node name="Ship" parent="." unique_id=973040579 instance=ExtResource("3_62liu")]
+[node name="Ship" parent="." unique_id=973040579 instance=ExtResource("2_62liu")]
+orbit_planet_path = NodePath("../Planet")
 
-[node name="HUD" parent="." instance=ExtResource("5_7dp5g")]
+[node name="HUD" parent="." instance=ExtResource("4_7dp5g")]

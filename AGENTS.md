@@ -23,6 +23,19 @@
 - Invoke the packer with local Java:
   - `java -cp .\bin\runnable-texturepacker.jar com.badlogic.gdx.tools.texturepacker.TexturePacker <inputDir> <outputDir> <packFileName>`
 
+## Scene-first configuration
+
+- Prefer defining persistent scene configuration in `.tscn` files and reusable `.tres` resources instead of assigning it from GDScript at runtime.
+- If a value is expected to stay the same for the whole lifetime of a scene, author it in the scene or resource, not in code.
+- Use GDScript for game logic, runtime state changes, wiring that cannot be serialized cleanly in the scene, and computed behavior.
+- If a value must remain configurable from code because it participates in runtime behavior, expose it with `@export` instead of hardcoding it in the script.
+
+## Typed GDScript
+
+- Keep all gameplay and UI GDScripts fully typed.
+- Add explicit types to exported properties, member variables, `@onready` references, function parameters, and return values.
+- Prefer typed locals as well when inference would be ambiguous or reduce readability.
+
 ## Example commands
 
 ```powershell

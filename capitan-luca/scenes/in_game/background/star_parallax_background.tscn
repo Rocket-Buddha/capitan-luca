@@ -9,7 +9,7 @@ layer = -10
 
 [node name="FarLayer" type="Parallax2D" parent="." unique_id=83811926]
 repeat_size = Vector2(1080, 1920)
-autoscroll = Vector2(-1.5, 0.5)
+autoscroll = Vector2(-1.5, 0.08)
 repeat_times = 2
 follow_viewport = false
 ignore_camera_scroll = true
@@ -26,7 +26,7 @@ region_rect = Rect2(0, 0, 1080, 1920)
 
 [node name="MidLayer" type="Parallax2D" parent="." unique_id=318094975]
 repeat_size = Vector2(1080, 1920)
-autoscroll = Vector2(-3, 1.1)
+autoscroll = Vector2(-3, 0.16)
 repeat_times = 2
 follow_viewport = false
 ignore_camera_scroll = true
@@ -43,7 +43,7 @@ region_rect = Rect2(0, 0, 1080, 1920)
 
 [node name="NearLayer" type="Parallax2D" parent="." unique_id=606983429]
 repeat_size = Vector2(1080, 1920)
-autoscroll = Vector2(-4.5, 1.8)
+autoscroll = Vector2(-4.5, 0.28)
 repeat_times = 2
 follow_viewport = false
 ignore_camera_scroll = true

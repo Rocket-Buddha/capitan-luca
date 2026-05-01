@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/game/light_year_counter.gd" id="1_3lo1o"]
+[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="2_6j5i6"]
+
+[node name="LightYearCounter" type="Control"]
+custom_minimum_size = Vector2(340, 76)
+mouse_filter = 2
+script = ExtResource("1_3lo1o")
+
+[node name="Readout" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+mouse_filter = 2
+theme_override_constants/separation = 14
+
+[node name="ValueLabel" type="Label" parent="Readout"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 42
+theme_override_fonts/font = ExtResource("2_6j5i6")
+text = "12.4"
+
+[node name="UnitMargin" type="MarginContainer" parent="Readout"]
+layout_mode = 2
+theme_override_constants/margin_top = 20
+
+[node name="UnitLabel" type="Label" parent="Readout/UnitMargin"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(1, 1, 1, 0.94)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 18
+theme_override_fonts/font = ExtResource("2_6j5i6")
+text = "AL"

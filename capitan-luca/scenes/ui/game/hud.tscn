@@ -1,44 +1,15 @@
 [gd_scene load_steps=6 format=3]
 
-[ext_resource type="PackedScene" path="res://scenes/ui/game/fuel_bar.tscn" id="1_6jxg8"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/light_year_counter.tscn" id="2_u0hde"]
-[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_q1dh4"]
-[ext_resource type="PackedScene" path="res://scenes/ui/game/pause_button.tscn" id="4_gv5i1"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_normal"]
-bg_color = Color(0.0509804, 0.101961, 0.188235, 0.92)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.364706, 0.878431, 0.964706, 0.65)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-content_margin_left = 20.0
-content_margin_top = 14.0
-content_margin_right = 20.0
-content_margin_bottom = 14.0
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_button_hover"]
-bg_color = Color(0.0784314, 0.152941, 0.270588, 0.96)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.572549, 0.929412, 0.984314, 0.9)
-corner_radius_top_left = 18
-corner_radius_top_right = 18
-corner_radius_bottom_right = 18
-corner_radius_bottom_left = 18
-content_margin_left = 20.0
-content_margin_top = 14.0
-content_margin_right = 20.0
-content_margin_bottom = 14.0
+[ext_resource type="Script" path="res://scripts/ui/game/hud.gd" id="1_627fw"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/fuel_bar.tscn" id="2_6jxg8"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/light_year_counter.tscn" id="3_u0hde"]
+[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="4_q1dh4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/pause_button.tscn" id="5_gv5i1"]
+[ext_resource type="PackedScene" path="res://scenes/ui/game/orbital_button.tscn" id="6_q77op"]
 
 [node name="HUD" type="CanvasLayer"]
 layer = 10
+script = ExtResource("1_627fw")
 
 [node name="Root" type="Control" parent="."]
 layout_mode = 3
@@ -59,10 +30,10 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72)
 theme_override_constants/shadow_offset_x = 0
 theme_override_constants/shadow_offset_y = 3
 theme_override_font_sizes/font_size = 18
-theme_override_fonts/font = ExtResource("3_q1dh4")
+theme_override_fonts/font = ExtResource("4_q1dh4")
 text = "FUEL"
 
-[node name="FuelBar" parent="Root" instance=ExtResource("1_6jxg8")]
+[node name="FuelBar" parent="Root" instance=ExtResource("2_6jxg8")]
 offset_left = 108.0
 offset_top = 60.0
 offset_right = 328.0
@@ -70,7 +41,7 @@ offset_bottom = 84.0
 custom_minimum_size = Vector2(220, 24)
 fuel_percent = 75.0
 
-[node name="LightYearCounter" parent="Root" instance=ExtResource("2_u0hde")]
+[node name="LightYearCounter" parent="Root" instance=ExtResource("3_u0hde")]
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -170.0
@@ -79,26 +50,21 @@ offset_right = 170.0
 offset_bottom = 106.0
 light_years = 12.4
 
-[node name="PauseButton" parent="Root" instance=ExtResource("4_gv5i1")]
+[node name="PauseButton" parent="Root" instance=ExtResource("5_gv5i1")]
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -108.0
+offset_left = -172.0
 offset_top = 30.0
 offset_right = -32.0
-offset_bottom = 106.0
+offset_bottom = 170.0
 
-[node name="OrbitalButton" type="Button" parent="Root"]
+[node name="OrbitalButton" parent="Root" instance=ExtResource("6_q77op")]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -356.0
-offset_top = -140.0
+offset_left = -172.0
+offset_top = -172.0
 offset_right = -32.0
 offset_bottom = -32.0
-theme_override_colors/font_color = Color(0.972549, 0.992157, 1, 1)
-theme_override_font_sizes/font_size = 22
-theme_override_styles/hover = SubResource("StyleBoxFlat_button_hover")
-theme_override_styles/normal = SubResource("StyleBoxFlat_button_normal")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_button_hover")
-text = "CALCULO ORBITAL x3"
+available_charges = 3

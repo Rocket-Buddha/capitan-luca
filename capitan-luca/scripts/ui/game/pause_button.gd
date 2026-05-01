@@ -1,3 +1,4 @@
+class_name HudPauseButton
 extends TextureButton
 
 @export_range(0.0, 1.0, 0.05) var idle_alpha: float = 1.0

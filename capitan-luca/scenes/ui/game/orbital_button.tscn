@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/game/orbital_button.gd" id="1_orbit"]
+[ext_resource type="Texture2D" path="res://assets/ui/game/orbital-calculation-icon-v02.png" id="2_icon"]
+[ext_resource type="FontFile" path="res://assets/fonts/Silkscreen-Regular.ttf" id="3_font"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orbital_icon"]
+atlas = ExtResource("2_icon")
+region = Rect2(159, 132, 933, 966)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_charge_badge"]
+bg_color = Color(0.0509804, 0.101961, 0.188235, 0.96)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.972549, 0.992157, 1, 0.92)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="OrbitalButton" type="TextureButton"]
+custom_minimum_size = Vector2(140, 140)
+tooltip_text = "Calculo orbital"
+texture_filter = 1
+focus_mode = 0
+mouse_default_cursor_shape = 2
+ignore_texture_size = true
+stretch_mode = 5
+texture_normal = SubResource("AtlasTexture_orbital_icon")
+script = ExtResource("1_orbit")
+available_charges = 3
+
+[node name="ChargeBadge" type="Panel" parent="."]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 82.0
+offset_right = 70.0
+offset_bottom = 130.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_charge_badge")
+
+[node name="ChargeLabel" type="Label" parent="ChargeBadge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.972549, 0.992157, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.72)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("3_font")
+horizontal_alignment = 1
+vertical_alignment = 1
+text = "3"

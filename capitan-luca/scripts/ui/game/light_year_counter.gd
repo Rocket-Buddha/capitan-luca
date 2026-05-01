@@ -1,3 +1,4 @@
+class_name LightYearCounter
 extends Control
 
 @export var light_years: float = 12.4

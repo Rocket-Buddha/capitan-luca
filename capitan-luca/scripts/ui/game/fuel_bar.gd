@@ -1,3 +1,4 @@
+class_name GameFuelBar
 extends Control
 
 @export_range(0.0, 100.0, 5.0) var fuel_percent: float = 75.0

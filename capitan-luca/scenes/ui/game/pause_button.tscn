@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" path="res://assets/ui/game/pause-button-v02.png" id="2_81nn5"]
 
 [node name="PauseButton" type="TextureButton"]
-custom_minimum_size = Vector2(76, 76)
+custom_minimum_size = Vector2(140, 140)
 texture_filter = 1
 focus_mode = 0
 mouse_default_cursor_shape = 2
